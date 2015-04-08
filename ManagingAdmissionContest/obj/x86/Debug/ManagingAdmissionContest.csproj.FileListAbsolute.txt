@@ -1,0 +1,7 @@
+c:\users\adi\documents\ManagingAdmissionContest\ManagingAdmissionContest\bin\Debug\ManagingAdmissionContest.exe
+c:\users\adi\documents\ManagingAdmissionContest\ManagingAdmissionContest\bin\Debug\ManagingAdmissionContest.pdb
+c:\users\adi\documents\ManagingAdmissionContest\ManagingAdmissionContest\obj\x86\Debug\ManagingAdmissionContest.MainForm.resources
+c:\users\adi\documents\ManagingAdmissionContest\ManagingAdmissionContest\obj\x86\Debug\ManagingAdmissionContest.Properties.Resources.resources
+c:\users\adi\documents\ManagingAdmissionContest\ManagingAdmissionContest\obj\x86\Debug\ManagingAdmissionContest.csproj.GenerateResource.Cache
+c:\users\adi\documents\ManagingAdmissionContest\ManagingAdmissionContest\obj\x86\Debug\ManagingAdmissionContest.exe
+c:\users\adi\documents\ManagingAdmissionContest\ManagingAdmissionContest\obj\x86\Debug\ManagingAdmissionContest.pdb

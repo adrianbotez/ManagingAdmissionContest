@@ -5,3 +5,14 @@ c:\users\adi\documents\ManagingAdmissionContest\ManagingAdmissionContest\obj\x86
 c:\users\adi\documents\ManagingAdmissionContest\ManagingAdmissionContest\obj\x86\Debug\ManagingAdmissionContest.csproj.GenerateResource.Cache
 c:\users\adi\documents\ManagingAdmissionContest\ManagingAdmissionContest\obj\x86\Debug\ManagingAdmissionContest.exe
 c:\users\adi\documents\ManagingAdmissionContest\ManagingAdmissionContest\obj\x86\Debug\ManagingAdmissionContest.pdb
+C:\Users\Gibi\Source\Repos\ManagingAdmissionContest\ManagingAdmissionContest\obj\x86\Debug\ManagingAdmissionContest.exe
+C:\Users\Gibi\Source\Repos\ManagingAdmissionContest\ManagingAdmissionContest\obj\x86\Debug\ManagingAdmissionContest.pdb
+C:\Users\Gibi\Source\Repos\ManagingAdmissionContest\ManagingAdmissionContest\bin\Debug\ManagingAdmissionContest.XML
+C:\Users\Gibi\Source\Repos\ManagingAdmissionContest\ManagingAdmissionContest\bin\Debug\ManagingAdmissionContest.exe
+C:\Users\Gibi\Source\Repos\ManagingAdmissionContest\ManagingAdmissionContest\bin\Debug\ManagingAdmissionContest.pdb
+C:\Users\Gibi\Source\Repos\ManagingAdmissionContest\ManagingAdmissionContest\obj\x86\Debug\ManagingAdmissionContest.csprojResolveAssemblyReference.cache
+C:\Users\Gibi\Source\Repos\ManagingAdmissionContest\ManagingAdmissionContest\obj\x86\Debug\ManagingAdmissionContest.Form1.resources
+C:\Users\Gibi\Source\Repos\ManagingAdmissionContest\ManagingAdmissionContest\obj\x86\Debug\ManagingAdmissionContest.MainForm.resources
+C:\Users\Gibi\Source\Repos\ManagingAdmissionContest\ManagingAdmissionContest\obj\x86\Debug\ManagingAdmissionContest.Properties.Resources.resources
+C:\Users\Gibi\Source\Repos\ManagingAdmissionContest\ManagingAdmissionContest\obj\x86\Debug\ManagingAdmissionContest.csproj.GenerateResource.Cache
+C:\Users\Gibi\Source\Repos\ManagingAdmissionContest\ManagingAdmissionContest\obj\x86\Debug\ManagingAdmissionContest.Form2.resources

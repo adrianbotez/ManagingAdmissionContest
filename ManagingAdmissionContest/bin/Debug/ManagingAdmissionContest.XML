@@ -1,0 +1,174 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ManagingAdmissionContest</name>
+    </assembly>
+    <members>
+        <member name="M:ManagingAdmissionContest.ApplicantDatabase.#ctor">
+            <summary>
+            Constructor initializes the list of Applicant objects.
+            </summary>
+        </member>
+        <member name="M:ManagingAdmissionContest.ApplicantDatabase.InitializeDatabase(System.String)">
+            <summary>
+            Initializes the only instance of this class. 
+            If the file already exists, it loads the data from file, if not, it creates a file.
+            </summary>
+            <param name="fileName">Can be the file name ("myfile.txt") 
+            or the absolute path ("D:\ManagingAdmissionContest-master\myfile.txt").</param>
+            <returns>Returns the only instance of this class.</returns>
+        </member>
+        <member name="M:ManagingAdmissionContest.ApplicantDatabase.DeleteDatabase">
+            <summary>
+            If the file exists, it deletes it, if not, it throws a FileNotFoundException.
+            It sets the only instance to null.
+            </summary>
+        </member>
+        <member name="M:ManagingAdmissionContest.ApplicantDatabase.InsertRecord(ManagingAdmissionContest.Applicant)">
+            <summary>
+            It inserts the applicant, if it's not already in the list.
+            </summary>
+            <param name="applicant">The applicant to be inserted.</param>
+        </member>
+        <member name="M:ManagingAdmissionContest.ApplicantDatabase.DeleteRecord(ManagingAdmissionContest.Applicant)">
+            <summary>
+            If the applicant is in the list, it deletes it.
+            </summary>
+            <param name="applicant">The applicant to be deleted.</param>
+        </member>
+        <member name="M:ManagingAdmissionContest.ApplicantDatabase.DeleteRecords(System.String,System.String)">
+            <summary>
+            It deletes the records that have the specified value for the specified property.
+            Throws ApplicantPropertyNotFoundException if the property is not found.
+            </summary>
+            <param name="property">The property to search.</param>
+            <param name="value">The value to search.</param>
+        </member>
+        <member name="M:ManagingAdmissionContest.ApplicantDatabase.GetPropValue(System.Object,System.String)">
+            <summary>
+            Returns the value of the property.
+            </summary>
+            <param name="src">The object that has the property.</param>
+            <param name="propName">The name of the property.</param>
+            <returns>The value of the property.</returns>
+        </member>
+        <member name="M:ManagingAdmissionContest.ApplicantDatabase.SetPropValue(System.Object,System.String,System.String)">
+            <summary>
+            It sets a value to a property.
+            </summary>
+            <param name="src">The object that has the property.</param>
+            <param name="propName">The name of the property.</param>
+            <param name="value">The value we want to set.</param>
+        </member>
+        <member name="M:ManagingAdmissionContest.ApplicantDatabase.UpdateRecords(System.String,System.String,System.String,System.String)">
+            <summary>
+            It updates the records that have a certain value for a certain property, 
+            with a specified value for a specified property.
+            Throws ApplicantPropertyNotFoundException if the property is not found.
+            </summary>
+            <param name="forProperty">The property to search.</param>
+            <param name="forValue">The value to search.</param>
+            <param name="setProperty">The property to update.</param>
+            <param name="setValue">The new value for the property.</param>
+        </member>
+        <member name="M:ManagingAdmissionContest.ApplicantDatabase.SelectAllRecords">
+            <summary>
+            Returns all the applicant records.
+            </summary>
+            <returns>A list of Applicant objects.</returns>
+        </member>
+        <member name="M:ManagingAdmissionContest.ApplicantDatabase.SelectRecords(System.String,System.String)">
+            <summary>
+            It selects the records that have the specified value for the specified property.
+            Throws ApplicantPropertyNotFoundException if the property is not found.
+            </summary>
+            <param name="property">The property to search.</param>
+            <param name="value">The value to search.</param>
+            <returns>Returns a list of Applicant objects.</returns>
+        </member>
+        <member name="M:ManagingAdmissionContest.ApplicantDatabase.SaveToFile">
+            <summary>
+            It saves the database to file.
+            </summary>
+        </member>
+        <member name="M:ManagingAdmissionContest.ApplicantDatabase.LoadFromFile(System.String)">
+            <summary>
+            It loads the database from file.
+            </summary>
+            <param name="fileName">The file from which to load the database.</param>
+            <returns>Returns an Applicant Database</returns>
+        </member>
+        <member name="F:ManagingAdmissionContest.Form1.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:ManagingAdmissionContest.Form1.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:ManagingAdmissionContest.Form1.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:ManagingAdmissionContest.Form2.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:ManagingAdmissionContest.Form2.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:ManagingAdmissionContest.Form2.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:ManagingAdmissionContest.MainForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:ManagingAdmissionContest.MainForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:ManagingAdmissionContest.MainForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:ManagingAdmissionContest.Program.Main">
+            <summary>
+            The main entry point for the application.
+            </summary>
+        </member>
+        <member name="T:ManagingAdmissionContest.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:ManagingAdmissionContest.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:ManagingAdmissionContest.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+    </members>
+</doc>

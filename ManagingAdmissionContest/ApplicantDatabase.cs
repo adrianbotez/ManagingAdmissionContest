@@ -7,7 +7,7 @@ using System.Reflection;
 
 namespace ManagingAdmissionContest
 {
-    class ApplicantDatabase : IApplicantDatabase
+    public class ApplicantDatabase : IApplicantDatabase
     {
         private static ApplicantDatabase _instance;
         private List<Applicant> ApplicantList { get; set; }
@@ -16,7 +16,7 @@ namespace ManagingAdmissionContest
         /// <summary>
         /// Constructor initializes the list of Applicant objects.
         /// </summary>
-        private ApplicantDatabase()
+        public ApplicantDatabase()
         {
             ApplicantList = new List<Applicant>();
 
@@ -87,7 +87,7 @@ namespace ManagingAdmissionContest
             {
                 this.ApplicantList.Add(applicant);
             }
-            SaveToFile();
+            //SaveToFile();
         }
 
         /// <summary>

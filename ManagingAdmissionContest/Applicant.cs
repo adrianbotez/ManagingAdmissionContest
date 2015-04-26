@@ -2,7 +2,7 @@
 
 namespace ManagingAdmissionContest
 {
-    class Applicant
+    public class Applicant
     {
         public string Cnp { get; set; }
         public string Surname { get; set; }

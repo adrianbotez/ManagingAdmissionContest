@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace ManagingAdmissionContest
 {
-    internal interface IApplicantDatabase
+    public interface IApplicantDatabase
     {
         void DeleteDatabase();
         void InsertRecord(Applicant applicant);

@@ -49,9 +49,9 @@
             this.label1.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(76, 97);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 27);
+            this.label1.Size = new System.Drawing.Size(119, 27);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Prenume";
+            this.label1.Text = "Firstname";
             // 
             // textBox1
             // 
@@ -89,9 +89,9 @@
             this.label2.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(76, 161);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 27);
+            this.label2.Size = new System.Drawing.Size(117, 27);
             this.label2.TabIndex = 10;
-            this.label2.Text = "Nume";
+            this.label2.Text = "Lastname";
             // 
             // label3
             // 
@@ -99,9 +99,9 @@
             this.label3.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(76, 229);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 27);
+            this.label3.Size = new System.Drawing.Size(123, 27);
             this.label3.TabIndex = 11;
-            this.label3.Text = "CNP";
+            this.label3.Text = "Badge no.";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
@@ -110,9 +110,9 @@
             this.label4.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(76, 300);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(124, 27);
+            this.label4.Size = new System.Drawing.Size(234, 27);
             this.label4.TabIndex = 12;
-            this.label4.Text = "Medie Bac";
+            this.label4.Text = "Baccalaureate grade";
             // 
             // label5
             // 
@@ -120,9 +120,9 @@
             this.label5.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(76, 373);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(186, 27);
+            this.label5.Size = new System.Drawing.Size(275, 27);
             this.label5.TabIndex = 13;
-            this.label5.Text = "Nota informatica";
+            this.label5.Text = "Computer science grade";
             // 
             // textBox6
             // 
@@ -137,9 +137,9 @@
             this.label6.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(76, 436);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(192, 27);
+            this.label6.Size = new System.Drawing.Size(216, 27);
             this.label6.TabIndex = 15;
-            this.label6.Text = "Nota matematica";
+            this.label6.Text = "Mathematics grade";
             // 
             // textBox3
             // 

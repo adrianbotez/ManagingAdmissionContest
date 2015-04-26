@@ -3,7 +3,6 @@ C:\Users\Gibi\Source\Repos\ManagingAdmissionContest\ManagingAdmissionContest\obj
 C:\Users\Gibi\Source\Repos\ManagingAdmissionContest\ManagingAdmissionContest\bin\Debug\ManagingAdmissionContest.XML
 C:\Users\Gibi\Source\Repos\ManagingAdmissionContest\ManagingAdmissionContest\bin\Debug\ManagingAdmissionContest.exe
 C:\Users\Gibi\Source\Repos\ManagingAdmissionContest\ManagingAdmissionContest\bin\Debug\ManagingAdmissionContest.pdb
-C:\Users\Gibi\Source\Repos\ManagingAdmissionContest\ManagingAdmissionContest\obj\x86\Debug\ManagingAdmissionContest.csprojResolveAssemblyReference.cache
 C:\Users\Gibi\Source\Repos\ManagingAdmissionContest\ManagingAdmissionContest\obj\x86\Debug\ManagingAdmissionContest.Form1.resources
 C:\Users\Gibi\Source\Repos\ManagingAdmissionContest\ManagingAdmissionContest\obj\x86\Debug\ManagingAdmissionContest.MainForm.resources
 C:\Users\Gibi\Source\Repos\ManagingAdmissionContest\ManagingAdmissionContest\obj\x86\Debug\ManagingAdmissionContest.Properties.Resources.resources
@@ -29,3 +28,13 @@ C:\Users\Adi\Documents\ManagingAdmissionContest\ManagingAdmissionContest\obj\x86
 C:\Users\Adi\Documents\ManagingAdmissionContest\ManagingAdmissionContest\obj\x86\Debug\ManagingAdmissionContest.exe
 C:\Users\Adi\Documents\ManagingAdmissionContest\ManagingAdmissionContest\obj\x86\Debug\ManagingAdmissionContest.pdb
 C:\Users\Adi\Documents\ManagingAdmissionContest\ManagingAdmissionContest\bin\Debug\ManagingAdmissionContest.XML
+C:\Users\Gibi\Source\Repos\ManagingAdmissionContest\ManagingAdmissionContest\bin\Debug\MigraDoc.DocumentObjectModel.dll
+C:\Users\Gibi\Source\Repos\ManagingAdmissionContest\ManagingAdmissionContest\bin\Debug\MigraDoc.Rendering.dll
+C:\Users\Gibi\Source\Repos\ManagingAdmissionContest\ManagingAdmissionContest\bin\Debug\MigraDoc.RtfRendering.dll
+C:\Users\Gibi\Source\Repos\ManagingAdmissionContest\ManagingAdmissionContest\bin\Debug\PdfSharp.Charting.dll
+C:\Users\Gibi\Source\Repos\ManagingAdmissionContest\ManagingAdmissionContest\bin\Debug\PdfSharp.dll
+C:\Users\Gibi\Source\Repos\ManagingAdmissionContest\ManagingAdmissionContest\bin\Debug\de\MigraDoc.DocumentObjectModel.resources.dll
+C:\Users\Gibi\Source\Repos\ManagingAdmissionContest\ManagingAdmissionContest\bin\Debug\de\MigraDoc.Rendering.resources.dll
+C:\Users\Gibi\Source\Repos\ManagingAdmissionContest\ManagingAdmissionContest\bin\Debug\de\MigraDoc.RtfRendering.resources.dll
+C:\Users\Gibi\Source\Repos\ManagingAdmissionContest\ManagingAdmissionContest\bin\Debug\de\PdfSharp.resources.dll
+C:\Users\Gibi\Source\Repos\ManagingAdmissionContest\ManagingAdmissionContest\obj\x86\Debug\ManagingAdmissionContest.csprojResolveAssemblyReference.cache

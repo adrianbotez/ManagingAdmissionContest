@@ -4,6 +4,10 @@ namespace ManagingAdmissionContest
 {
     public class Applicant
     {
+        private string notaBac;
+        private string notaInfo;
+        private string notaMate;
+
         public string Cnp { get; set; }
         public string Surname { get; set; }
         public string Name { get; set; }
@@ -45,6 +49,17 @@ namespace ManagingAdmissionContest
             this.BacGrade = Convert.ToDouble(fields[4]);
             this.InfoGrade = Convert.ToDouble(fields[5]);
             this.MathGrade = Convert.ToDouble(fields[6]);
+        }
+
+        public Applicant(string cnp, string surname, string name, string notaBac, string notaInfo, string notaMate)
+        {
+            // TODO: Complete member initialization
+            this.Cnp = cnp;
+            this.Surname = surname;
+            this.Name = name;
+            this.notaBac = notaBac;
+            this.notaInfo = notaInfo;
+            this.notaMate = notaMate;
         }
 
         public override string ToString()

@@ -15,5 +15,12 @@ namespace ManagingAdmissionContest
         {
             InitializeComponent();
         }
+       
+        private void button1_Click(object sender, EventArgs e)
+        {
+           SaveFileDialog saveFile = new SaveFileDialog();
+           saveFile.ShowDialog();
+           saveFile.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*";
+     }
     }
 }

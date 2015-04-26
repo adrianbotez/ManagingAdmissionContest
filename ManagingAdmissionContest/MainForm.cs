@@ -48,7 +48,7 @@ namespace ManagingAdmissionContest
 
         private void publishResults_Click(object sender, EventArgs e)
         {
-            IApplicantDatabase appDatabase = new ApplicantDatabase();
+            IApplicantDatabase appDatabase = ApplicantDatabase.InitializeDatabase("applicantTable.txt");
 
             TestPopulateDatabase(appDatabase);
 
@@ -228,11 +228,11 @@ namespace ManagingAdmissionContest
 
         private void TestPopulateDatabase(IApplicantDatabase appDatabase)
         {
-            Applicant applicant1 = new Applicant("1910541231783", "Adrian", "Botez", 8, 8.75, 6, 7.75);
+            Applicant applicant1 = new Applicant("1910541231783", "Adrian", "Botez", 8, 8.75, 6, 7.75, 0.0);
 
-            Applicant applicant2 = new Applicant("2342184593201", "Victor", "Rachieru", 7, 4.75, 4, 4.5);
+            Applicant applicant2 = new Applicant("2342184593201", "Victor", "Rachieru", 7, 4.75, 4, 4.5, 0.0);
 
-            Applicant applicant3 = new Applicant("1314541890188", "Marius", "Zavincu", 8, 9.75, 10, 6.75);
+            Applicant applicant3 = new Applicant("1314541890188", "Marius", "Zavincu", 8, 9.75, 10, 6.75, 0.0);
 
             appDatabase.InsertRecord(applicant1);
             appDatabase.InsertRecord(applicant2);

@@ -2,21 +2,34 @@
 using System.Collections.Generic;
 using System.Text;
 using System.IO;
-using System.Diagnostics;
 using System.Reflection;
 
 namespace ManagingAdmissionContest
 {
+    /// <summary>
+    /// Manages the specific aspects of database connection for the applicant database.
+    /// </summary>
     public class ApplicantDatabase : IApplicantDatabase
     {
         private static ApplicantDatabase _instance;
         private List<Applicant> ApplicantList { get; set; }
-        private string FileName { get; set; }
+        /// <summary>
+        /// The name of the file the table is saved in.
+        /// </summary>
+        public static string FileName { get; set; }
+        /// <summary>
+        /// The name of the folder the table is saved in.
+        /// </summary>
+        public static string FolderName { get; set; }
+        /// <summary>
+        /// The string that contains the name of the folder and the file the table is saved in.
+        /// </summary>
+        public static string Path { get; set; }
 
         /// <summary>
         /// Constructor initializes the list of Applicant objects.
         /// </summary>
-        public ApplicantDatabase()
+        private ApplicantDatabase()
         {
             ApplicantList = new List<Applicant>();
 
@@ -26,54 +39,57 @@ namespace ManagingAdmissionContest
         /// Initializes the only instance of this class. 
         /// If the file already exists, it loads the data from file, if not, it creates a file.
         /// </summary>
-        /// <param name="fileName">Can be the file name ("myfile.txt") 
-        /// or the absolute path ("D:\ManagingAdmissionContest-master\myfile.txt").</param>
+        /// <param name="fileName">The file name ("myfile.txt")</param>
         /// <returns>Returns the only instance of this class.</returns>
         public static ApplicantDatabase InitializeDatabase(string fileName)
+        {
+
+            FolderName = "applicantDatabase";
+            return InitializeDatabase(FolderName, fileName);
+        }
+
+        /// <summary>
+        /// Initializes the only instance of this class. 
+        /// If the file already exists, it loads the data from file, if not, it creates a file.
+        /// </summary>
+        /// <param name="folderName">The folder name ("myfolder")</param>
+        /// <param name="fileName">The file name ("myfile.txt")</param>
+        /// <returns>Returns the only instance of this class.</returns>
+        public static ApplicantDatabase InitializeDatabase(string folderName, string fileName)
         {
             if (_instance == null)
             {
                 _instance = new ApplicantDatabase();
             }
 
+            Path = folderName + "\\" + fileName;
+
             try
             {
-                if (File.Exists(fileName))
+                if (File.Exists(Path))
                 {
-                    _instance = LoadFromFile(fileName);
+                    _instance = LoadFromFile(Path);
                 }
-                FileStream fs = File.Create(fileName);
-                fs.Close();
+                Database.CreateDatabase(folderName);
+                Database.CreateTable(Path);
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.ToString());
             }
-            _instance.FileName = fileName;
+            FileName = fileName;
+            FolderName = folderName;
             return _instance;
         }
 
         /// <summary>
-        /// If the file exists, it deletes it, if not, it throws a FileNotFoundException.
+        /// Deletes a database.
         /// It sets the only instance to null.
         /// </summary>
         public void DeleteDatabase()
         {
-            try
-            {
-                if (File.Exists(_instance.FileName))
-                {
-                    File.Delete(_instance.FileName);
-                }
-                else
-                {
-                    throw new FileNotFoundException("File does not exist.");
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.ToString());
-            }
+            Database.DeleteDatabase(FolderName);
+           
             _instance = null;
         }
 
@@ -83,11 +99,11 @@ namespace ManagingAdmissionContest
         /// <param name="applicant">The applicant to be inserted.</param>
         public void InsertRecord(Applicant applicant)
         {
-            if (this.ApplicantList.IndexOf(applicant) == -1)
+            if (ApplicantList.IndexOf(applicant) == -1)
             {
-                this.ApplicantList.Add(applicant);
+                ApplicantList.Add(applicant);
             }
-            //SaveToFile();
+            SaveToFile();
         }
 
         /// <summary>
@@ -96,9 +112,9 @@ namespace ManagingAdmissionContest
         /// <param name="applicant">The applicant to be deleted.</param>
         public void DeleteRecord(Applicant applicant)
         {
-            if (this.ApplicantList.IndexOf(applicant) != -1)
+            if (ApplicantList.IndexOf(applicant) != -1)
             {
-                this.ApplicantList.Remove(applicant);
+                ApplicantList.Remove(applicant);
             }
             SaveToFile();
         }
@@ -113,17 +129,17 @@ namespace ManagingAdmissionContest
         {
             Type t = typeof(Applicant);
             PropertyInfo p = t.GetProperty(property);
-            List<Applicant> applicant_to_remove = new List<Applicant>();
+            List<Applicant> applicantToRemove = new List<Applicant>();
             if (p != null)
             {
                 foreach (Applicant a in ApplicantList)
                 {
                     if (GetPropValue(a, property).ToString() == value)
                     {
-                        applicant_to_remove.Add(a);
+                        applicantToRemove.Add(a);
                     }
                 }
-                foreach (Applicant a in applicant_to_remove)
+                foreach (Applicant a in applicantToRemove)
                 {
                         ApplicantList.Remove(a);
                 }
@@ -206,7 +222,7 @@ namespace ManagingAdmissionContest
         /// <returns>A list of Applicant objects.</returns>
         public List<Applicant> SelectAllRecords()
         {
-            return this.ApplicantList;
+            return ApplicantList;
         }
 
         /// <summary>
@@ -220,14 +236,14 @@ namespace ManagingAdmissionContest
         {
             Type t = typeof(Applicant);
             PropertyInfo p = t.GetProperty(property);
-            List<Applicant> applicants_to_return = new List<Applicant>();
+            List<Applicant> applicantsToReturn = new List<Applicant>();
             if (p != null)
             {
                 foreach (Applicant a in ApplicantList)
                 {
                     if (GetPropValue(a, property).ToString() == value)
                     {
-                        applicants_to_return.Add(a);
+                        applicantsToReturn.Add(a);
                     }
                 }
             }
@@ -235,7 +251,7 @@ namespace ManagingAdmissionContest
             {
                 throw new ApplicantPropertyNotFoundException("Property " + property + "was not found.");
             }
-            return applicants_to_return;
+            return applicantsToReturn;
         }
 
         /// <summary>
@@ -243,7 +259,7 @@ namespace ManagingAdmissionContest
         /// </summary>
         public void SaveToFile()
         {
-            System.IO.File.WriteAllText(this.FileName, this.ToString());
+            File.WriteAllText(FileName, ToString());
         }
 
         /// <summary>
@@ -273,7 +289,7 @@ namespace ManagingAdmissionContest
             StringBuilder sb = new StringBuilder();
             foreach (Applicant applicant in ApplicantList)
             {
-                sb.Append(applicant.ToString());
+                sb.Append(applicant);
                 sb.Append("\r\n");
             }
             return sb.ToString();
@@ -281,12 +297,22 @@ namespace ManagingAdmissionContest
 
     }
 
+    /// <summary>
+    /// Custom class for all database related exceptions.
+    /// </summary>
     public class DatabaseException : Exception
     {
-        public DatabaseException():base()
+        /// <summary>
+        /// The base constructor for the DatabaseException class.
+        /// </summary>
+        public DatabaseException()
         {
             
         }
+        /// <summary>
+        /// Another constructor for the DatabaseException class that receives a message as argument.
+        /// </summary>
+        /// <param name="message"></param>
         public DatabaseException(string message)
             : base(message)
         {
@@ -294,13 +320,22 @@ namespace ManagingAdmissionContest
         }
     }
 
+    /// <summary>
+    /// Exception derived from DatabaseException that is thrown when a property is not found.
+    /// </summary>
     public class ApplicantPropertyNotFoundException : DatabaseException
     {
+        /// <summary>
+        /// The base constructor for the ApplicantPropertyNotFoundException class.
+        /// </summary>
         public ApplicantPropertyNotFoundException()
-            : base()
         {
 
         }
+        /// <summary>
+        /// Another constructor for the ApplicantPropertyNotFoundException class, that receives a message as argument.
+        /// </summary>
+        /// <param name="message"></param>
         public ApplicantPropertyNotFoundException(string message)
             : base(message)
         {
@@ -308,13 +343,22 @@ namespace ManagingAdmissionContest
         }
     }
 
+    /// <summary>
+    /// Exception derived from DatabaseException that is thrown when a file is not found.
+    /// </summary>
     public class FileNotFoundException : DatabaseException
     {
+        /// <summary>
+        /// The base constructor for the FileNotFoundException class.
+        /// </summary>
         public FileNotFoundException()
-            : base()
         {
 
         }
+        /// <summary>
+        /// Another constructor for the FileNotFoundException class, that receives a message as argument.
+        /// </summary>
+        /// <param name="message"></param>
         public FileNotFoundException(string message)
             : base(message)
         {
